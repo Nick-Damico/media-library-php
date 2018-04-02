@@ -1,12 +1,6 @@
 <?php
-$catalog = array();
-$catalog[101] = 'Design Patterns';
-$catalog[201] = 'Forrest Gump';
-$catalog[301] = 'Beethoven';
-$catalog[401] = 'Fortnite';
-$catalog[102] = 'Clean Code';
+include("inc/data.php");
 $page_title = "Full Catalog";
-
 $section = Null;
 
 if (isset($_GET["cat"])) {
@@ -34,10 +28,14 @@ include("inc/header.php");
   <div class="wrapper">
 
     <h1><?php echo $page_title; ?></h1>
-    <ul>
+    <ul class="items">
       <?php
         foreach($catalog as $item) {
-          echo "<li>" . $item . "</li>";
+          echo "<li><a href='#'><img src='"
+                . $item["img"] . "' alt='"
+                . $item["title"] . "' />"
+                . "<p>View Details</p>"
+                . "</a></li>";
         }
       ?>
     </ul>
