@@ -1,5 +1,5 @@
 <?php
-$current_year = Date("Y");
+
 $page_title = 'Personal Media Library';
 ?>
 <?php include("inc/header.php"); ?>
@@ -18,23 +18,4 @@ $page_title = 'Personal Media Library';
 			</div>
 
 		</div>
-
-	</div><!-- end content -->
-
-	<div class="footer">
-
-		<div class="wrapper">
-
-			<ul>
-				<li><a href="http://twitter.com/treehouse">Twitter</a></li>
-				<li><a href="https://www.facebook.com/TeamTreehouse">Facebook</a></li>
-			</ul>
-
-			<p>&copy;<?php echo $current_year; ?> Personal Media Library</p>
-
-		</div>
-
-	</div>
-
-</body>
-</html>
+<?php include("inc/footer.php") ?>
