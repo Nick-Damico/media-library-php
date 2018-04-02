@@ -1,5 +1,12 @@
 <?php
+$catalog = array();
+$catalog[101] = 'Design Patterns';
+$catalog[201] = 'Forrest Gump';
+$catalog[301] = 'Beethoven';
+$catalog[401] = 'Fortnite';
+$catalog[102] = 'Clean Code';
 $page_title = "Full Catalog";
+
 $section = Null;
 
 if (isset($_GET["cat"])) {
@@ -22,8 +29,21 @@ if (isset($_GET["cat"])) {
 include("inc/header.php");
 ?>
 
-<div class="section page">
-  <h1><?php echo $page_title; ?></h1>
+<div class="section catalog page">
+
+  <div class="wrapper">
+
+    <h1><?php echo $page_title; ?></h1>
+    <ul>
+      <?php
+        foreach($catalog as $item) {
+          echo "<li>" . $item . "</li>";
+        }
+      ?>
+    </ul>
+
+  </di>
+
 </div>
 
 <?php include("inc/footer.php"); ?>
