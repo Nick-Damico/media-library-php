@@ -515,8 +515,9 @@ body {font-family: 'Open Sans', sans-serif; background:#f0eeed; color: #676767;}
 .header {background: #ef8887; border-bottom: 3px solid #db7a78;}
 .header .branding-title {float: left; margin: 0 0 0 5px; font: 0/0 serif; text-shadow: none; color: transparent; width:225px; height:125px;background:url(../img/branding-title.png) 0 6px no-repeat;padding: 6px 0;}
 .header .branding-title a {display: block; height: 125px; width: 225px;}
-.header .nav {float: right; top: 10; right: 0; margin: 0; position: relative; left: 15px; z-index: 99999999;}
+.header .nav {float: right; top: 10; right: 0; margin: 0; padding-top: 20px; position: relative; left: 15px; z-index: 99999999;}
 .header .nav li {display: inline-block; margin: 0; list-style: none;}
+.header .nav li a:first-child { margin-left: 2px;}
 .header .nav li a {
     color: white;
     text-decoration: none;
@@ -531,6 +532,10 @@ body {font-family: 'Open Sans', sans-serif; background:#f0eeed; color: #676767;}
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.header .nav li a#nav__a--games {
+  background: url(../img/media/controller.png) no-repeat 4px 30px;
+  background-size: 72px;
+ }
 .header .nav li.on a {text-decoration:underline;}
 .header .nav li a:hover, .header .nav li a:active {opacity: 0.7;}
 .header .nav li.books a {background-position: 8px -5px;}
