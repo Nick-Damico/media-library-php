@@ -17,9 +17,9 @@ if (isset($_GET["cat"])) {
   } else if ($_GET["cat"] == 'games') {
     $page_title = 'Games';
     $section = 'games';
+  } else {
+    $page_title = "Opps, that page doesn't exist.";
   }
-} else {
-  $page_title = "Opps, this page doesn't exist.";
 }
 include("inc/header.php");
 ?>
@@ -28,7 +28,11 @@ include("inc/header.php");
 
   <div class="wrapper">
 
-    <h1><?php echo $page_title; ?></h1>
+    <h1><?php
+      if ($section != null) {
+        echo "<a href='catalog.php'>Full Catalog</a> &gt; ";
+      }
+      echo $page_title; ?></h1>
     <ul class="items">
       <?php
       $categories = array_category($catalog, $section);
